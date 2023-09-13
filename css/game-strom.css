@@ -787,6 +787,23 @@ footer .copyrighyt {
   height: 100vh;
 }
 /* End opacityBg */
+/* Start Loading */
+.loading {
+  z-index: 100000000000000000000000000000000000000;
+  background-color: #222434;
+}
+.loading.hide {
+  z-index: -1000;
+  opacity: 0;
+}
+.loading .progress-ring {
+  animation: circle 2s infinite;
+  -webkit-animation: circle 2s infinite;
+}
+.progress-ring__circle {
+  stroke-dasharray: 10 20;
+}
+/* End Loading */
 /* Start Animation */
 @keyframes growUp {
   50% {

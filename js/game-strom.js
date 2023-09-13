@@ -1,23 +1,14 @@
 'use strict'
 
-// Cursor
+// Loading
 
-// let cursor = document.querySelector('.cursor');
+let loading = document.querySelector('.loading');
 
-// document.addEventListener('mousemove', function (e) {
-//   cursor.style.cssText = `top:${e.pageY-scrollY-5}px; left:${e.pageX-scrollX-5}px`
-// })
-
-// let pointer = document.querySelectorAll('.pointer');
-
-// pointer.forEach(function(el) {
-//   el.addEventListener('mouseenter', function() {
-//     cursor.classList.add('scale');
-//   })
-//   el.addEventListener('mouseleave', function() {
-//     cursor.classList.remove('scale');
-//   })
-// })
+window.addEventListener('load', function () {
+  setTimeout(() => {
+    loading.classList.add('hide')
+  }, 500);
+})
 
 // Pointer Cursor
 
