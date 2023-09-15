@@ -51,6 +51,9 @@
 .bg-sec {
   background-color: #161829;
 }
+.pl-10 {
+  padding-left: 10px;
+}
 .bg-third {
   background-color: var(--thid-color);
 }
@@ -101,10 +104,12 @@
   width: fit-content;
 }
 .w-50 {
-  width: 50px !important;
+  min-width: 50px !important;
+  max-width: 50px !important;
 }
 .h-50 {
-  height: 50px !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
 }
 .obj-cover {
   object-fit: cover;
@@ -128,6 +133,17 @@
 .f40 {
   font-size: 40px;
   line-height: 1.2;
+}
+@media (width <= 992px) {
+  .f40 {
+    font-size: 28px;
+  }
+  .f24 {
+    font-size: 20px;
+  }
+  .c-gray {
+    font-size: 14px;
+  }
 }
 form input:not([type = 'submit']),
 textarea {
@@ -514,6 +530,16 @@ aside .soical a:hover {
   right: 0;
   left: 20px;
 }
+@media (width <= 992px) {
+  .our-game::after {
+    display: none;
+  }
+  .our-game::before {
+    left: 50%;
+    translate: -50% 0;
+    opacity: .5;
+  }
+}
 .our-game .feat-game {
   right: 40px;
   height: 120px;
@@ -559,8 +585,15 @@ aside .soical a:hover {
   object-fit: cover;
   aspect-ratio: .7;
 }
+@media (width <= 992px) {
+  .our-game .games .game .content > img {
+    aspect-ratio: none;
+    height: 200px;
+  }
+}
 .quantils {
-  gap: 30px;
+  gap: 10px 30px;
+  flex-wrap: wrap;
 }
 .quantils div:not(:last-child)::before {
   content: "";
@@ -589,6 +622,9 @@ aside .soical a:hover {
   object-fit: cover;
 }
 @media (width <= 767px) {
+  .team .owl-team {
+    padding-left: 8px;
+  }
   .team .owl-team img {
     aspect-ratio: .8;
   }
@@ -611,6 +647,11 @@ aside .soical a:hover {
   color: #222434;
   font-size: 6rem;
 }
+@media (width <= 767px) {
+  .statistics .num {
+    font-size: 4.5rem;
+  }
+}
 .services .owl-carousel .cursorHV::before,
 .statistics .cursorHV::before,
 .talented .row .cursorHV::before {
@@ -620,6 +661,11 @@ aside .soical a:hover {
 /* Start Services */
 .services .titiles {
   gap: 60px;
+}
+@media (width <= 992px) {
+  .services .titiles {
+    gap: 20px;
+  }
 }
 .services .owl-carousel .item {
   background-color: #222434;
@@ -703,8 +749,10 @@ aside .soical a:hover {
 }
 /* ENd Testimonials */
 /* Start Community */
-.community {
-  background: url(../img/call-to-action-object.png)  0 50% / auto no-repeat, url(../img/call-to-action-object-2.png) 100% 50% / auto no-repeat, #161829;
+@media (width >= 767px) {
+  .community {
+    background: url(../img/call-to-action-object.png)  0 50% / auto no-repeat, url(../img/call-to-action-object-2.png) 100% 50% / auto no-repeat, #161829;
+  }
 }
 .community .circle-prog {
   z-index: -1;
@@ -723,9 +771,12 @@ aside .soical a:hover {
 }
 /* End Community */
 /* Start contact Us */
-.contact-us {
-  background: url(../img/contact-us-obj.png)  0 50% / auto no-repeat, url(../img/contact-us-object-2.png) 100% 50% / auto no-repeat, #161829;
+@media (width >= 767px) {
+  .contact-us {
+    background: url(../img/contact-us-obj.png)  0 50% / auto no-repeat, url(../img/contact-us-object-2.png) 100% 50% / auto no-repeat, #161829;
+  }
 }
+
 .contact-us .ico {
   width: 50px; height: 50px;
   background-color: #303141;
@@ -748,14 +799,24 @@ aside .soical a:hover {
 }
 /* End Links */
 /* Start Footer */
-footer .parnet-box-left {
-  padding-right: 50px;
-  padding-left: 100px;
+footer .parnet-box-left,
+footer .parnet-box-right {
+  padding-left: 22px;
+  padding-right: 22px;
 }
 footer .parnet-box-right {
-  padding-right: 100px;
-  padding-left: 50px;
   background-color: var(--sec-color);
+}
+@media (width >= 992px) {
+  footer .parnet-box-left {
+    padding-right: 50px;
+    padding-left: 100px;
+  }
+  footer .parnet-box-right {
+    padding-right: 100px;
+    padding-left: 50px;
+    background-color: var(--sec-color);
+  }
 }
 footer .grid-box .box {
   width: 145px;
